@@ -1,25 +1,32 @@
 import React from "react";
+import MessageInfoContainer from './MessageInfoContainer.js'
 
 const ChatMessageView = (props) => {
 
-  const username = this.props.username;
-  const date = this.props.date;
-  const userimage = this.props.image;
+  const messageinfocontainers = [];
+  const username = props.messages.username;
+  const date = props.messages.date;
+  const messages = props.messages;
+  const userimage = props.messages.image;
+
+  console.log(messages)
+
+messages.forEach((message) => {
+      messageinfocontainers.push (
+        <MessageInfoContainer message={message} key={message.text}/>
+      );
+});
+
 
   return (
-    <section className="chatmessageview">
-     <div className="chatmessageview__chatmessage">
-       <div className="userimage">
-         <img alt="userimage" src="../../assets/images/user__image.png" />
-       </div>
-       <div className="chatmessageview__messageinfo">
-        <span className="username">{this.props.username}</span>
-        <span className="date">1/11/111</span>
-        <span className="message"> ELON MUSK IS A REPTILE </span>
-       </div>
-     </div>
-    </section>
-  );
-};
+
+        <section className="chatmessageview">
+         <div className="chatmessageview__chatmessage">
+          {messageinfocontainers}
+         </div>
+        </section>
+      )
+
+}
 
 export default ChatMessageView;
