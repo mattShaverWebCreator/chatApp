@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import ChatMessageView from './ChatMessageView.js'
 import ChatInput from './ChatInput.js'
 

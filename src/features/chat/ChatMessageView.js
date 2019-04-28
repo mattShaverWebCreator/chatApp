@@ -1,13 +1,12 @@
 import React from "react";
 import MessageInfoContainer from './MessageInfoContainer.js'
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+
 
 const ChatMessageView = (props) => {
 
   const messageinfocontainers = [];
-  const username = props.messages.username;
-  const date = props.messages.date;
   const messages = props.messages;
-  const userimage = props.messages.image;
 
   console.log(messages)
 

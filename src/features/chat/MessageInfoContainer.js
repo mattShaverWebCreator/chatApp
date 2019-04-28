@@ -1,4 +1,5 @@
 import React from 'react';
+import userimage from '../../assets/images/user__image.jpg'
 
 
 const MessageInfoContainer = (props) => {
@@ -7,8 +8,8 @@ const MessageInfoContainer = (props) => {
 
   return (
     <React.Fragment>
-      <div className="userimage">
-        <img alt="userimage" src="../../assets/images/user__image.png" />
+      <div className="chatmessageview__userimage">
+        <img src={userimage} alt="userimage"/>
       </div>
       <div className="chatmessageview__messageinfo">
        <span className="username">{message.username}</span>
